@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Box - Kotak Aspirasi OSIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f0; /* Hijau muda sebagai latar */
+            color: #2e8b57; /* Hijau botol gelap */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border: 2px solid #2e8b57;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #006400; /* Hijau botol lebih gelap */
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #2e8b57;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            background-color: #2e8b57;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #006400;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+        /* Pesan sukses/error dari Formspree */
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Listening Box</h1>
+        <p>Kotak Aspirasi OSIS - Bagikan ide, saran, atau keluhanmu secara anonim!</p>
+        <form action="https://formspree.io/f/mgolzayr" method="POST"> <!-- Ganti YOUR_FORM_ID dengan ID form Formspree Anda -->
+            <label for="name">Nama (Opsional):</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda">
+
+            <label for="email">Email (Opsional):</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda">
+
+            <label for="message">Aspirasi Anda:</label>
+            <textarea id="message" name="message" placeholder="Tulis aspirasi Anda di sini..." required></textarea>
+
+            <button type="submit">Kirim Aspirasi</button>
+        </form>
+        <div class="footer">
+            Dibuat untuk OSIS - Semua aspirasi akan dijaga kerahasiaannya.
+        </div>
+    </div>
+</body>
+</html>
